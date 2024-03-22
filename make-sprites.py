@@ -58,7 +58,7 @@ def generate_sprites():
         img = Image.open(f"{sprite_loc}{sprite}").convert('RGBA')
         count = 0
         for spr_type in sprite_types:
-            img.paste(pk_types_icons[spr_type], ((pk_types_icons[spr_type].size[1] * count), (img.size[0] - pk_types_icons[spr_type].size[0])) )
+            img.paste(pk_types_icons[spr_type], ((pk_types_icons[spr_type].size[1] * count), 0) ) # (img.size[0]- pk_types_icons[spr_type].size[0])) )
             count += 1
         img.save(f"{out_path}{sprite}")
 
